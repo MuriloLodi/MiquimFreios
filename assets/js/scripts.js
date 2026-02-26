@@ -176,3 +176,59 @@
     if (e.key === "Escape" && videoModal && videoModal.classList.contains("open")) closeVideo();
   });
 })();
+
+// =========================
+// FAQ (abrir suave com altura animada)
+// =========================
+const faqItems = Array.from(document.querySelectorAll(".faq-item"));
+
+function closeFaq(item) {
+  item.classList.remove("open");
+  const btn = item.querySelector(".faq-q");
+  const ans = item.querySelector(".faq-a");
+  if (btn) btn.setAttribute("aria-expanded", "false");
+  if (ans) ans.style.maxHeight = "0px";
+}
+
+function openFaq(item) {
+  item.classList.add("open");
+  const btn = item.querySelector(".faq-q");
+  const ans = item.querySelector(".faq-a");
+  if (btn) btn.setAttribute("aria-expanded", "true");
+  if (ans) {
+    // garante que dá pra medir altura
+    ans.style.maxHeight = "0px";
+    // força reflow pra transição ficar bonita
+    void ans.offsetHeight;
+    ans.style.maxHeight = ans.scrollHeight + "px";
+  }
+}
+
+faqItems.forEach((item) => {
+  const btn = item.querySelector(".faq-q");
+  const ans = item.querySelector(".faq-a");
+  if (!btn || !ans) return;
+
+  // ✅ não usa hidden (pra animar)
+  ans.hidden = false;
+  ans.style.maxHeight = "0px";
+
+  btn.addEventListener("click", () => {
+    const isOpen = item.classList.contains("open");
+
+    // fecha todos
+    faqItems.forEach(closeFaq);
+
+    // abre o clicado
+    if (!isOpen) openFaq(item);
+  });
+});
+
+// ✅ recalcula altura se a tela mudar (quando estiver aberto)
+window.addEventListener("resize", () => {
+  faqItems.forEach((item) => {
+    if (!item.classList.contains("open")) return;
+    const ans = item.querySelector(".faq-a");
+    if (ans) ans.style.maxHeight = ans.scrollHeight + "px";
+  });
+});
