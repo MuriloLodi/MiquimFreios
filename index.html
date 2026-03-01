@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +8,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Teko:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -22,7 +25,8 @@
     <div class="container">
       <div class="nav-row">
         <a class="brand" href="#top" aria-label="Home">
-          <img src="assets/logo.png" alt="Logo Miquim Freios" onerror="this.remove();document.getElementById('brandFallback').style.display='flex';">
+          <img src="assets/logo.png" alt="Logo Miquim Freios"
+            onerror="this.remove();document.getElementById('brandFallback').style.display='flex';">
           <span class="fallback" id="brandFallback" style="display:none;">
             <span class="mark" aria-hidden="true"></span>
             <span>MIQUIM FREIOS</span>
@@ -67,10 +71,33 @@
 
       <div class="swiper" id="heroSwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img class="slide-media" src="assets/img/MiquimSite1.png" alt="Miquim Freios - Slide 1"></div>
-          <div class="swiper-slide"><img class="slide-media" src="assets/img/MiquimSite2.png" alt="Miquim Freios - Slide 3"></div>
-          <div class="swiper-slide"><img class="slide-media" src="assets/img/MiquimSite3.png" alt="Miquim Freios - Slide 2"></div>
+
+          <div class="swiper-slide">
+            <picture class="slide-picture">
+              <source media="(max-width: 520px)" srcset="assets/img/MiquimSite1-mobile.png">
+              <source media="(max-width: 980px)" srcset="assets/img/MiquimSite1-tablet.png">
+              <img class="slide-media" src="assets/img/MiquimSite1-pc.png" alt="Miquim Freios - Slide 1">
+            </picture>
+          </div>
+
+          <div class="swiper-slide">
+            <picture class="slide-picture">
+              <source media="(max-width: 520px)" srcset="assets/img/MiquimSite2-mobile.png">
+              <source media="(max-width: 980px)" srcset="assets/img/MiquimSite2-tablet.png">
+              <img class="slide-media" src="assets/img/MiquimSite2-pc.png" alt="Miquim Freios - Slide 2">
+            </picture>
+          </div>
+
+          <div class="swiper-slide">
+            <picture class="slide-picture">
+              <source media="(max-width: 520px)" srcset="assets/img/MiquimSite3-mobile.png">
+              <source media="(max-width: 980px)" srcset="assets/img/MiquimSite3-tablet.png">
+              <img class="slide-media" src="assets/img/MiquimSite3-pc.png" alt="Miquim Freios - Slide 3">
+            </picture>
+          </div>
+
         </div>
+
         <div class="swiper-pagination hero-pagination"></div>
       </div>
 
@@ -92,12 +119,14 @@
             E PNEUMÁTICA
           </h2>
           <p class="about-copy">
-            A <strong>Miquim Freios</strong>, localizada em <strong>Toledo - PR</strong> (Jardim Independência), é especializada em
+            A <strong>Miquim Freios</strong>, localizada em <strong>Toledo - PR</strong> (Jardim Independência), é
+            especializada em
             <strong>manutenção, reparação e soluções em sistemas de freios</strong>, com forte atuação em
             <strong>equipamentos hidráulicos</strong>, <strong>pneumáticos</strong> e veículos.
           </p>
           <p class="about-copy">
-            Atuamos com foco em <strong>diagnóstico preciso</strong>, <strong>segurança</strong> e <strong>durabilidade</strong>,
+            Atuamos com foco em <strong>diagnóstico preciso</strong>, <strong>segurança</strong> e
+            <strong>durabilidade</strong>,
             entregando um serviço técnico confiável para quem não pode parar.
           </p>
           <a class="about-btn" href="#contato">Converse Conosco</a>
@@ -105,7 +134,7 @@
 
         <div class="about-right">
           <div class="tilt-wrap">
-            <img src="https://cpfabbri.com.br/wp-content/uploads/2023/05/image-2023-05-09T141404.857.png" alt="Miquim Freios - Toledo PR">
+            <img src="assets/img/miquim.jpeg" alt="Miquim Freios - Toledo PR">
             <div class="badge-anos">
               <div class="anos-inner">
                 <div class="anos-num">2017</div>
@@ -131,7 +160,9 @@
         <div class="svc-video-grid">
 
           <button class="svc-video" id="openVideo" type="button" aria-label="Reproduzir vídeo de apresentação">
-            <img class="svc-video-thumb" src="https://cpfabbri.com.br/wp-content/uploads/2023/05/image-2023-05-09T141404.857.png" alt="Vídeo - Miquim Freios" onerror="this.src='assets/img/download.png'">
+            <img class="svc-video-thumb"
+              src="https://cpfabbri.com.br/wp-content/uploads/2023/05/image-2023-05-09T141404.857.png"
+              alt="Vídeo - Miquim Freios" onerror="this.src='assets/img/download.png'">
             <span class="svc-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
             <span class="svc-video-caption">
               <span class="cap-k">ASSISTA EM 40s</span>
@@ -142,9 +173,11 @@
           <div class="svc-side">
             <p class="svc-side-kicker">O QUE VOCÊ ENCONTRA AQUI</p>
             <h3 class="svc-side-title">Serviço técnico, rápido e confiável</h3>
-            <p class="svc-side-sub">Diagnóstico assertivo, manutenção completa e soluções que evitam parada e dor de cabeça.</p>
+            <p class="svc-side-sub">Diagnóstico assertivo, manutenção completa e soluções que evitam parada e dor de
+              cabeça.</p>
             <ul class="svc-list" aria-label="Lista de serviços">
-              <li><i class="fa-solid fa-check"></i> Sistemas de freios (inspeção, reparo e substituição de componentes)</li>
+              <li><i class="fa-solid fa-check"></i> Sistemas de freios (inspeção, reparo e substituição de componentes)
+              </li>
               <li><i class="fa-solid fa-check"></i> Diagnóstico técnico com avaliação completa de falhas</li>
               <li><i class="fa-solid fa-check"></i> Manutenção preventiva com checklist e orientações</li>
               <li><i class="fa-solid fa-check"></i> Equipamentos hidráulicos: vedação, pressão e reparação</li>
@@ -180,14 +213,15 @@
 
   </section>
 
-<!-- DIVISOR ENTRE SEÇÕES (SERVIÇOS -> ESPECIALIDADES) -->
-<div class="section-divider" aria-hidden="false">
-  <div class="section-divider-line" aria-hidden="true"></div>
+  <!-- DIVISOR ENTRE SEÇÕES (SERVIÇOS -> ESPECIALIDADES) -->
+  <div class="section-divider" aria-hidden="false">
+    <div class="section-divider-line" aria-hidden="true"></div>
 
-  <button class="section-divider-btn" type="button" data-scroll="#especialidades" aria-label="Descer para Especialidades">
-  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-</button>
-</div>
+    <button class="section-divider-btn" type="button" data-scroll="#especialidades"
+      aria-label="Descer para Especialidades">
+      <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+    </button>
+  </div>
 
 
   <!-- ESPECIALIDADES -->
@@ -206,12 +240,15 @@
 
           <article class="spec-card" tabindex="0" aria-label="Sistemas de Freios — ver sobre">
             <div class="spec-media">
-              <img src="https://cpfabbri.com.br/wp-content/uploads/2023/05/image-2023-05-09T141404.857.png" alt="Peça de freio" onerror="this.src='assets/img/download.png'">
+              <img src="assets/img/freios.png" alt="Peça de freio" onerror="this.src='assets/img/download.png'">
             </div>
             <div class="spec-topline">
               <h3 class="spec-h3">Sistemas de Freios</h3>
               <div class="spec-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a7 7 0 1 1-7 7 7 7 0 0 1 7-7zm0 2.5a4.5 4.5 0 1 0 4.5 4.5A4.5 4.5 0 0 0 12 7.5z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 3a7 7 0 1 1-7 7 7 7 0 0 1 7-7zm0 2.5a4.5 4.5 0 1 0 4.5 4.5A4.5 4.5 0 0 0 12 7.5z" />
+                </svg>
               </div>
             </div>
             <p class="spec-p">Inspeção, reparo e solução completa pra segurança e desempenho.</p>
@@ -228,12 +265,17 @@
 
           <article class="spec-card" tabindex="0" aria-label="Hidráulica — ver sobre">
             <div class="spec-media">
-              <img src="https://cpfabbri.com.br/wp-content/uploads/2023/05/image-2023-05-09T141404.857.png" alt="Componente hidráulico" onerror="this.src='assets/img/download.png'">
+              <img src="assets/img/hidraulica.png" alt="Componente hidráulico"
+                onerror="this.src='assets/img/download.png'">
             </div>
             <div class="spec-topline">
               <h3 class="spec-h3">Hidráulica</h3>
               <div class="spec-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v4h-2V4H7v4H5V4a2 2 0 0 1 2-2z"/><path d="M4 10h16v4H4z"/><path d="M8 16h8v6H8z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 2h10a2 2 0 0 1 2 2v4h-2V4H7v4H5V4a2 2 0 0 1 2-2z" />
+                  <path d="M4 10h16v4H4z" />
+                  <path d="M8 16h8v6H8z" />
+                </svg>
               </div>
             </div>
             <p class="spec-p">Manutenção e reparação com eficiência, vedação e durabilidade.</p>
@@ -250,12 +292,17 @@
 
           <article class="spec-card" tabindex="0" aria-label="Pneumática — ver sobre">
             <div class="spec-media">
-              <img src="https://cpfabbri.com.br/wp-content/uploads/2023/05/image-2023-05-09T141404.857.png" alt="Componente pneumático" onerror="this.src='assets/img/download.png'">
+              <img src="assets/img/pneumatica.png" alt="Componente pneumático"
+                onerror="this.src='assets/img/download.png'">
             </div>
             <div class="spec-topline">
               <h3 class="spec-h3">Pneumática</h3>
               <div class="spec-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M9 2h6v2h2v2h2v6h-2V8h-2V6h-2V4H9v2H7v2H5v4H3V6h2V4h2V2h2z"/><path d="M8 9h8v6H8z"/><path d="M6 19h12v2H6z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 2h6v2h2v2h2v6h-2V8h-2V6h-2V4H9v2H7v2H5v4H3V6h2V4h2V2h2z" />
+                  <path d="M8 9h8v6H8z" />
+                  <path d="M6 19h12v2H6z" />
+                </svg>
               </div>
             </div>
             <p class="spec-p">Soluções e reparos pra manter o sistema rodando liso e seguro.</p>
@@ -276,107 +323,110 @@
   </section>
 
   <!-- ========= FAQ (cole ANTES do footer, por exemplo depois da seção #clientes) ========= -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="faq-head">
-      <p class="faq-kicker">DÚVIDAS FREQUENTES</p>
-      <h2 class="faq-title">FAQ</h2>
-      <p class="faq-sub">
-        Se não encontrar sua dúvida aqui, chama no WhatsApp que a gente responde rapidinho.
-      </p>
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="faq-head">
+        <p class="faq-kicker">DÚVIDAS FREQUENTES</p>
+        <h2 class="faq-title">FAQ</h2>
+        <p class="faq-sub">
+          Se não encontrar sua dúvida aqui, chama no WhatsApp que a gente responde rapidinho.
+        </p>
+      </div>
+
+      <div class="faq-box" role="region" aria-label="Perguntas frequentes">
+        <!-- item -->
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>Vocês vendem peças?</span>
+            <i class="faq-ico" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              <strong>Sim.</strong> Trabalhamos com <strong>peças e componentes</strong> relacionados a freios,
+              hidráulica e pneumática.
+              Pra confirmar disponibilidade e preço, é só chamar no WhatsApp com a foto/medida ou modelo do equipamento.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>Quais serviços vocês fazem?</span>
+            <i class="faq-ico" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              Fazemos <strong>manutenção, reparação e diagnóstico</strong> em <strong>sistemas de freios</strong>,
+              além de soluções em <strong>hidráulica</strong> e <strong>pneumática</strong> (vedações, vazamentos,
+              pressão,
+              válvulas, conexões e ajustes).
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>Vocês fazem orçamento?</span>
+            <i class="faq-ico" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              <strong>Sim.</strong> O orçamento depende do tipo de peça/serviço e do estado do sistema.
+              A gente avalia e te passa o que precisa ser feito com transparência.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>Em quanto tempo fica pronto?</span>
+            <i class="faq-ico" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              Varia conforme a complexidade e a disponibilidade de peças. Em muitos casos dá pra resolver no mesmo dia.
+              Pra te dar um prazo real, chama no WhatsApp com os detalhes do problema.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>Vocês atendem empresas e frotas?</span>
+            <i class="faq-ico" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              <strong>Sim.</strong> Atendemos empresas, manutenção preventiva e demandas recorrentes.
+              Se for frota/equipamento de trabalho, a gente prioriza <strong>segurança e redução de parada</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false">
+            <span>Como falar com vocês agora?</span>
+            <i class="faq-ico" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a" hidden>
+            <p>
+              É só clicar no botão flutuante do WhatsApp aqui do site e mandar mensagem.
+              Se preferir, também dá pra ligar no número informado no rodapé.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-cta">
+        <a class="faq-btn"
+          href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Tenho%20uma%20d%C3%BAvida%20sobre%20servi%C3%A7os%20e%20pe%C3%A7as."
+          target="_blank" rel="noopener">
+          <span class="dot" aria-hidden="true"></span>
+          Tirar dúvida no WhatsApp
+        </a>
+      </div>
     </div>
-
-    <div class="faq-box" role="region" aria-label="Perguntas frequentes">
-      <!-- item -->
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false">
-          <span>Vocês vendem peças?</span>
-          <i class="faq-ico" aria-hidden="true"></i>
-        </button>
-        <div class="faq-a" hidden>
-          <p>
-            <strong>Sim.</strong> Trabalhamos com <strong>peças e componentes</strong> relacionados a freios, hidráulica e pneumática.
-            Pra confirmar disponibilidade e preço, é só chamar no WhatsApp com a foto/medida ou modelo do equipamento.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false">
-          <span>Quais serviços vocês fazem?</span>
-          <i class="faq-ico" aria-hidden="true"></i>
-        </button>
-        <div class="faq-a" hidden>
-          <p>
-            Fazemos <strong>manutenção, reparação e diagnóstico</strong> em <strong>sistemas de freios</strong>,
-            além de soluções em <strong>hidráulica</strong> e <strong>pneumática</strong> (vedações, vazamentos, pressão,
-            válvulas, conexões e ajustes).
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false">
-          <span>Vocês fazem orçamento?</span>
-          <i class="faq-ico" aria-hidden="true"></i>
-        </button>
-        <div class="faq-a" hidden>
-          <p>
-            <strong>Sim.</strong> O orçamento depende do tipo de peça/serviço e do estado do sistema.
-            A gente avalia e te passa o que precisa ser feito com transparência.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false">
-          <span>Em quanto tempo fica pronto?</span>
-          <i class="faq-ico" aria-hidden="true"></i>
-        </button>
-        <div class="faq-a" hidden>
-          <p>
-            Varia conforme a complexidade e a disponibilidade de peças. Em muitos casos dá pra resolver no mesmo dia.
-            Pra te dar um prazo real, chama no WhatsApp com os detalhes do problema.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false">
-          <span>Vocês atendem empresas e frotas?</span>
-          <i class="faq-ico" aria-hidden="true"></i>
-        </button>
-        <div class="faq-a" hidden>
-          <p>
-            <strong>Sim.</strong> Atendemos empresas, manutenção preventiva e demandas recorrentes.
-            Se for frota/equipamento de trabalho, a gente prioriza <strong>segurança e redução de parada</strong>.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false">
-          <span>Como falar com vocês agora?</span>
-          <i class="faq-ico" aria-hidden="true"></i>
-        </button>
-        <div class="faq-a" hidden>
-          <p>
-            É só clicar no botão flutuante do WhatsApp aqui do site e mandar mensagem.
-            Se preferir, também dá pra ligar no número informado no rodapé.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="faq-cta">
-      <a class="faq-btn" href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Tenho%20uma%20d%C3%BAvida%20sobre%20servi%C3%A7os%20e%20pe%C3%A7as."
-        target="_blank" rel="noopener">
-        <span class="dot" aria-hidden="true"></span>
-        Tirar dúvida no WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- CLIENTES -->
   <section class="reviews" id="clientes">
@@ -384,16 +434,27 @@
       <div class="rv-top">
         <div class="rv-left">
           <div class="rv-stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
           </div>
           <p class="rv-kicker">CLIENTES QUE CONFIAM</p>
           <h2 class="rv-title">SEGURANÇA<br>QUE VIRA<br>REFERÊNCIA</h2>
           <p class="rv-sub">
-            Atendimento técnico, transparência e serviço que resolve. Aqui em Toledo, a confiança se conquista no dia a dia — e os depoimentos abaixo mostram isso.
+            Atendimento técnico, transparência e serviço que resolve. Aqui em Toledo, a confiança se conquista no dia a
+            dia — e os depoimentos abaixo mostram isso.
           </p>
         </div>
 
@@ -434,11 +495,21 @@
             </div>
           </div>
           <div class="testi-stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
           </div>
           <p class="testi-text">Atendimento, cuidado e qualidade — gratidão por tanto profissionalismo!</p>
         </article>
@@ -454,11 +525,21 @@
             </div>
           </div>
           <div class="testi-stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
           </div>
           <p class="testi-text">Seriedade e excelência no serviço.</p>
         </article>
@@ -474,11 +555,21 @@
             </div>
           </div>
           <div class="testi-stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
+            </svg>
           </div>
           <p class="testi-text">Atendimento muito bom e muito prestativo.</p>
         </article>
@@ -559,12 +650,14 @@
     </div>
   </div>
 
-  <a class="wpp-float" href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Quero%20um%20or%C3%A7amento."
-    target="_blank" rel="noopener" aria-label="Chamar no WhatsApp" title="Chamar no WhatsApp">
+  <a class="wpp-float"
+    href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Quero%20um%20or%C3%A7amento." target="_blank"
+    rel="noopener" aria-label="Chamar no WhatsApp" title="Chamar no WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="assets/js/scripts.js" ></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
+
 </html>

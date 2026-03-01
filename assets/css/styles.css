@@ -290,36 +290,34 @@ a {
     box-shadow: none;
 }
 
-.hero-frame::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 30px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent 0 6%, rgba(var(--redRGB), .95) 6% 94%, transparent 94% 100%);
-    z-index: 8;
-    opacity: .9;
-    pointer-events: none;
+
+/* HERO: alturas certinhas */
+.hero .swiper{
+  width: 100%;
 }
 
-.hero-mark {
-    position: absolute;
-    left: 22px;
-    top: 18px;
-    width: 22px;
-    height: 22px;
-    background: var(--red);
-    clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
-    transform: skewX(-12deg);
-    z-index: 9;
-    opacity: .95;
-    pointer-events: none;
+/* Tablet */
+@media (max-width: 980px){
+  .hero .swiper{ height: 700px; } /* 760x700 */
 }
 
-.hero .swiper {
-    width: 100%;
-    height: clamp(380px, 62vh, 720px)
+/* Celular */
+@media (max-width: 520px){
+  .hero .swiper{ height: 530px; } /* 360x530 */
+}
+
+/* Picture preenchendo 100% */
+.hero .swiper-slide .slide-picture{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero .swiper-slide .slide-picture img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .hero .swiper-slide {
@@ -339,28 +337,6 @@ a {
     filter: contrast(1.05) saturate(1.05);
 }
 
-.hero .swiper-slide::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(1200px 600px at 60% 40%, rgba(0, 0, 0, .10), rgba(0, 0, 0, .62)),
-        linear-gradient(90deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .20) 45%, rgba(0, 0, 0, .60));
-    z-index: 2;
-    pointer-events: none;
-}
-
-.hero .swiper-slide::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        repeating-linear-gradient(0deg, rgba(255, 255, 255, .06) 0 1px, transparent 1px 44px),
-        repeating-linear-gradient(90deg, rgba(255, 255, 255, .06) 0 1px, transparent 1px 44px);
-    opacity: .18;
-    z-index: 3;
-    pointer-events: none;
-}
 
 .hero-nav {
     position: absolute;
@@ -369,8 +345,6 @@ a {
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, .16);
-    background: rgba(0, 0, 0, .35);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -381,7 +355,6 @@ a {
 }
 
 .hero-nav:hover {
-    background: rgba(0, 0, 0, .55);
     border-color: rgba(255, 255, 255, .30);
     transform: translateY(-50%) scale(1.03);
 }
@@ -2145,7 +2118,7 @@ a {
   background-image:
     radial-gradient(1000px 520px at 50% 18%, rgba(255,255,255,.10), transparent 58%),
     linear-gradient(180deg, #00000054 0%, #0b0b0be3 55%, #090909 100%),
-    url("https://cpfabbri.com.br/wp-content/uploads/2023/05/image-2023-05-09T141404.857.png"); /* <-- sua imagem */
+    url("../img/miquim.jpeg"); /* <-- sua imagem */
 
   background-size:
     auto,
@@ -2214,4 +2187,17 @@ a {
   line-height: 1;
   color: var(--red);
   display: block;
+}
+
+.hero .swiper-slide .slide-picture{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero .swiper-slide .slide-picture img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
