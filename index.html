@@ -4,23 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="A Miquim Freios, localizada em Toledo - PR, é especializada em manutenção, reparação e soluções em sistemas de freios, equipamentos hidráulicos e pneumáticos." />
+  
   <title>Miquim Freios</title>
+
+  <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Teko:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Swiper -->
+  <link rel="preload" as="image" href="assets/img/MiquimSite1-mobile.png" media="(max-width: 520px)">
+  <link rel="preload" as="image" href="assets/img/MiquimSite1-pc.png" media="(min-width: 981px)">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
+  
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+  
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <div class="nav-row">
@@ -53,7 +59,6 @@
     </div>
   </header>
 
-  <!-- Mobile drawer -->
   <aside class="mobile-drawer" id="drawer" aria-label="Menu mobile">
     <a href="#quem-somos" class="m-link">Quem somos</a>
     <a href="#servicos" class="m-link">Nossos serviços</a>
@@ -62,7 +67,6 @@
     <a href="#contato" class="m-link" style="border-color:rgba(var(--redRGB),.35)">Entrar em contato</a>
   </aside>
 
-  <!-- HERO -->
   <div id="top"></div>
   <section class="hero">
     <div class="hero-frame">
@@ -75,7 +79,7 @@
             <picture class="slide-picture">
               <source media="(max-width: 520px)" srcset="assets/img/MiquimSite1-mobile.png">
               <source media="(max-width: 980px)" srcset="assets/img/MiquimSite1-tablet.png">
-              <img class="slide-media" src="assets/img/MiquimSite1-pc.png" alt="Miquim Freios - Slide 1">
+              <img class="slide-media" src="assets/img/MiquimSite1-pc.png" alt="Miquim Freios - Slide 1" fetchpriority="high" decoding="sync">
             </picture>
           </div>
 
@@ -83,7 +87,7 @@
             <picture class="slide-picture">
               <source media="(max-width: 520px)" srcset="assets/img/MiquimSite2-mobile.png">
               <source media="(max-width: 980px)" srcset="assets/img/MiquimSite2-tablet.png">
-              <img class="slide-media" src="assets/img/MiquimSite2-pc.png" alt="Miquim Freios - Slide 2">
+              <img class="slide-media" src="assets/img/MiquimSite2-pc.png" alt="Miquim Freios - Slide 2" loading="lazy" decoding="async">
             </picture>
           </div>
 
@@ -91,7 +95,7 @@
             <picture class="slide-picture">
               <source media="(max-width: 520px)" srcset="assets/img/MiquimSite3-mobile.png">
               <source media="(max-width: 980px)" srcset="assets/img/MiquimSite3-tablet.png">
-              <img class="slide-media" src="assets/img/MiquimSite3-pc.png" alt="Miquim Freios - Slide 3">
+              <img class="slide-media" src="assets/img/MiquimSite3-pc.png" alt="Miquim Freios - Slide 3" loading="lazy" decoding="async">
             </picture>
           </div>
 
@@ -105,7 +109,6 @@
     </div>
   </section>
 
-  <!-- QUEM SOMOS -->
   <section class="about" id="quem-somos">
     <div class="container">
       <div class="about-grid">
@@ -135,7 +138,7 @@
 
         <div class="about-right">
           <div class="tilt-wrap">
-            <img src="assets/img/miquim.jpeg" alt="Miquim Freios - Toledo PR">
+            <img src="assets/img/miquim.jpeg" alt="Miquim Freios - Toledo PR" loading="lazy" decoding="async">
             <div class="badge-anos">
               <div class="anos-inner">
                 <div class="anos-num">2017</div>
@@ -149,7 +152,6 @@
     </div>
   </section>
 
-  <!-- SERVIÇOS -->
   <section class="services" id="servicos">
     <div class="container">
       <div class="svc-head">
@@ -162,7 +164,7 @@
 
           <div class="svc-video svc-image" aria-label="Imagem de apresentação">
             <img class="svc-video-thumb" src="assets/img/miquimfoto.png" alt="Serviços — Miquim Freios"
-              onerror="this.src='assets/img/download.png'">
+              loading="lazy" decoding="async" onerror="this.src='assets/img/download.png'">
           </div>
 
           <div class="svc-side">
@@ -171,13 +173,13 @@
             <p class="svc-side-sub">Diagnóstico assertivo, manutenção completa e soluções que evitam parada e dor de
               cabeça.</p>
             <ul class="svc-list" aria-label="Lista de serviços">
-              <li><i class="fa-solid fa-check"></i> Sistemas de freios (inspeção, reparo e substituição de componentes)
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Sistemas de freios (inspeção, reparo e substituição de componentes)
               </li>
-              <li><i class="fa-solid fa-check"></i> Diagnóstico técnico com avaliação completa de falhas</li>
-              <li><i class="fa-solid fa-check"></i> Manutenção preventiva com checklist e orientações</li>
-              <li><i class="fa-solid fa-check"></i> Equipamentos hidráulicos: vedação, pressão e reparação</li>
-              <li><i class="fa-solid fa-check"></i> Equipamentos pneumáticos: válvulas, conexões e eficiência</li>
-              <li><i class="fa-solid fa-check"></i> Soluções e reparos sob medida pra sua necessidade</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Diagnóstico técnico com avaliação completa de falhas</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Manutenção preventiva com checklist e orientações</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Equipamentos hidráulicos: vedação, pressão e reparação</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Equipamentos pneumáticos: válvulas, conexões e eficiência</li>
+              <li><i class="fa-solid fa-check" aria-hidden="true"></i> Soluções e reparos sob medida pra sua necessidade</li>
             </ul>
             <a class="svc-side-cta" target="_blank"
               href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Quero%20um%20or%C3%A7amento.">
@@ -192,7 +194,6 @@
     </div>
   </section>
 
-  <!-- DIVISOR ENTRE SEÇÕES (SERVIÇOS -> ESPECIALIDADES) -->
   <div class="section-divider" aria-hidden="false">
     <div class="section-divider-line" aria-hidden="true"></div>
 
@@ -202,7 +203,6 @@
     </button>
   </div>
 
-  <!-- ESPECIALIDADES -->
   <section class="specialties" id="especialidades">
     <div class="container">
       <div class="spec-head">
@@ -218,7 +218,7 @@
 
           <article class="spec-card" tabindex="0" aria-label="Sistemas de Freios — ver sobre">
             <div class="spec-media">
-              <img src="assets/img/freios.png" alt="Peça de freio" onerror="this.src='assets/img/download.png'">
+              <img src="assets/img/freios.png" alt="Peça de freio" loading="lazy" decoding="async" onerror="this.src='assets/img/download.png'">
             </div>
             <div class="spec-topline">
               <h3 class="spec-h3">Sistemas de Freios</h3>
@@ -243,7 +243,7 @@
 
           <article class="spec-card" tabindex="0" aria-label="Hidráulica — ver sobre">
             <div class="spec-media">
-              <img src="assets/img/hidraulica.png" alt="Componente hidráulico"
+              <img src="assets/img/hidraulica.png" alt="Componente hidráulico" loading="lazy" decoding="async"
                 onerror="this.src='assets/img/download.png'">
             </div>
             <div class="spec-topline">
@@ -270,7 +270,7 @@
 
           <article class="spec-card" tabindex="0" aria-label="Pneumática — ver sobre">
             <div class="spec-media">
-              <img src="assets/img/pneumatica.png" alt="Componente pneumático"
+              <img src="assets/img/pneumatica.png" alt="Componente pneumático" loading="lazy" decoding="async"
                 onerror="this.src='assets/img/download.png'">
             </div>
             <div class="spec-topline">
@@ -300,7 +300,6 @@
     </div>
   </section>
 
-  <!-- ========= FAQ ========= -->
   <section class="faq" id="faq">
     <div class="container">
       <div class="faq-head">
@@ -405,7 +404,6 @@
     </div>
   </section>
 
-  <!-- CLIENTES -->
   <section class="reviews" id="clientes">
     <div class="container">
       <div class="rv-top">
@@ -465,7 +463,7 @@
           <div class="testi-head">
             <div class="testi-user">
               <div class="testi-pic" data-initial="A">
-                <img src="assets/img/mulher.png" alt="Foto de Andressa Tavares" loading="lazy"
+                <img src="assets/img/mulher.png" alt="Foto de Andressa Tavares" loading="lazy" decoding="async"
                   onerror="this.closest('.testi-pic').classList.add('fallback'); this.remove();">
               </div>
               <div style="min-width:0">
@@ -476,21 +474,11 @@
           </div>
 
           <div class="testi-stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
           </div>
 
           <p class="testi-text">Atendimento, cuidado e qualidade — gratidão por tanto profissionalismo!</p>
@@ -500,7 +488,7 @@
           <div class="testi-head">
             <div class="testi-user">
               <div class="testi-pic" data-initial="C">
-                <img src="assets/img/homem.png" alt="Foto de Carlos Eduardo G." loading="lazy"
+                <img src="assets/img/homem.png" alt="Foto de Carlos Eduardo G." loading="lazy" decoding="async"
                   onerror="this.closest('.testi-pic').classList.add('fallback'); this.remove();">
               </div>
               <div style="min-width:0">
@@ -511,21 +499,11 @@
           </div>
 
           <div class="testi-stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
           </div>
 
           <p class="testi-text">Seriedade e excelência no serviço.</p>
@@ -535,7 +513,7 @@
           <div class="testi-head">
             <div class="testi-user">
               <div class="testi-pic" data-initial="S">
-                <img src="assets/img/sidemar.png" alt="Foto de Sidemar Nunes" loading="lazy"
+                <img src="assets/img/sidemar.png" alt="Foto de Sidemar Nunes" loading="lazy" decoding="async"
                   onerror="this.closest('.testi-pic').classList.add('fallback'); this.remove();">
               </div>
               <div style="min-width:0">
@@ -546,21 +524,11 @@
           </div>
 
           <div class="testi-stars" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
-            <svg viewBox="0 0 24 24">
-              <path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" />
-            </svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.3l-6.2 3.7 1.7-7.1-5.5-4.8 7.2-.6L12 2l2.8 6.5 7.2.6-5.5 4.8 1.7 7.1z" /></svg>
           </div>
 
           <p class="testi-text">Atendimento muito bom e muito prestativo.</p>
@@ -569,11 +537,10 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer" id="contato">
     <div class="container">
       <div class="footer-map">
-        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        <iframe title="Mapa de localização da Miquim Freios no Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           src="https://www.google.com/maps?q=Rua%20Presidente%20Juscelino%20Kubitschek%20de%20Oliveira%2C%20151%20-%20Jardim%20Independ%C3%AAncia%2C%20Toledo%20-%20PR&output=embed">
         </iframe>
       </div>
@@ -598,13 +565,13 @@
               <li>
                 <a class="foot-item" target="_blank" href="https://www.instagram.com/miquinbogado/"
                   aria-label="Instagram">
-                  <i class="fa-brands fa-instagram"></i> Instagram
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram
                 </a>
               </li>
               <li>
                 <a class="foot-item" target="_blank" href="https://www.facebook.com/miquim.freiois/?locale=pt_BR"
                   aria-label="Facebook">
-                  <i class="fa-brands fa-facebook-f"></i> Facebook
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook
                 </a>
               </li>
             </ul>
@@ -613,7 +580,7 @@
           <div>
             <h3 class="foot-title">CONTATOS</h3>
             <div class="foot-item">
-              <i class="fa-solid fa-phone"></i> (45) 9 9809-6373
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> (45) 9 9809-6373
             </div>
           </div>
 
@@ -644,11 +611,11 @@
   <a class="wpp-float"
     href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Quero%20um%20or%C3%A7amento." target="_blank"
     rel="noopener" aria-label="Chamar no WhatsApp" title="Chamar no WhatsApp">
-    <i class="fa-brands fa-whatsapp"></i>
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="assets/js/scripts.js" defer></script>
 </body>
 
 </html>
