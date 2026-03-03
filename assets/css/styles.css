@@ -101,7 +101,7 @@ a {
 }
 
 .brand img {
-    width: 170px;
+    width:40px;
     height: auto;
     display: block;
     filter: drop-shadow(0 10px 25px rgba(0, 0, 0, .35));
@@ -722,16 +722,6 @@ a {
     display: block;
     transform: scale(1.02);
     filter: contrast(1.05) saturate(1.05);
-}
-
-.svc-video::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(700px 320px at 60% 35%, rgba(var(--redRGB), .18), transparent 60%),
-        linear-gradient(180deg, rgba(0, 0, 0, .20), rgba(0, 0, 0, .72));
-    pointer-events: none;
 }
 
 .svc-play {
@@ -1803,7 +1793,7 @@ a {
     }
 
     .brand img {
-        width: 150px
+        width: 30px
     }
 
     .about-grid {

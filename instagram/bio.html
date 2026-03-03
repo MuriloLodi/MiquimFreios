@@ -1,0 +1,330 @@
+<!-- bio.html — Link na Bio (estilo do exemplo) -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miquim Freios — Link na Bio</title>
+
+  <meta name="description" content="Links rápidos da Miquim Freios: site, WhatsApp e redes sociais." />
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon">
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --bg2: #0f0f0f;
+      --grid: rgba(255, 255, 255, .06);
+      --text: rgba(255, 255, 255, .88);
+      --muted: rgba(255, 255, 255, .58);
+
+      /* ✅ PALETA SÓ VERMELHO (mecânica) */
+      --red: #E11D2E;
+      --red2: #B0121E;
+      --redRGB: 225, 29, 46;
+      --red2RGB: 176, 18, 30;
+
+      --card: rgba(22, 24, 28, .92);
+      --card2: rgba(14, 15, 18, .92);
+      --stroke: rgba(255, 255, 255, .10);
+
+      --primary: #f2efe8;         /* botão claro tipo exemplo */
+      --primaryText: #151515;
+
+      --wpp: #25D366;
+
+      --wrapW: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body{
+      margin:0;
+      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      overflow-x:hidden;
+
+      background:
+        radial-gradient(1200px 600px at 50% 35%, rgba(255,255,255,.05), transparent 60%),
+        radial-gradient(900px 520px at 65% 25%, rgba(var(--redRGB), .12), transparent 60%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:-40px;
+      pointer-events:none;
+      background:
+        repeating-linear-gradient(0deg, var(--grid) 0 1px, transparent 1px 38px),
+        repeating-linear-gradient(90deg, var(--grid) 0 1px, transparent 1px 38px);
+      opacity:.28;
+      z-index:-2;
+    }
+
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(0,0,0,.0), rgba(0,0,0,.55) 55%, rgba(0,0,0,.82) 80%);
+      z-index:-1;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 42px 18px;
+    }
+
+    /* Card central (igual exemplo) */
+    .card{
+      width: min(420px, 100%);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      box-shadow: 0 28px 90px rgba(0,0,0,.60);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(700px 260px at 50% -10%, rgba(255,255,255,.08), transparent 60%),
+        radial-gradient(700px 260px at 85% 70%, rgba(var(--redRGB), .10), transparent 60%);
+      opacity:.9;
+    }
+
+    /* Hero imagem */
+    .hero{
+      position:relative;
+      padding: 16px 16px 0;
+      z-index:2;
+    }
+    .hero-frame{
+      position:relative;
+      border-radius: 16px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background:#0a0a0a;
+      height: 160px;
+    }
+    .hero-frame img.cover{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter: contrast(1.02) saturate(1.02);
+      transform: scale(1.02);
+      opacity:.92;
+    }
+    .hero-frame::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.62));
+      pointer-events:none;
+    }
+    .hero-logo{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+      width: 210px;
+      max-width: 78%;
+      height:auto;
+      opacity: .95;
+      filter: drop-shadow(0 16px 35px rgba(0,0,0,.55));
+      z-index:2;
+    }
+
+    /* Conteúdo */
+    .body{
+      position:relative;
+      z-index:2;
+      text-align:center;
+      padding: 14px 18px 16px;
+    }
+
+    .kicker{
+      margin: 6px 0 2px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,.70);
+    }
+
+    .title{
+      margin: 0;
+      font-family: Teko, Montserrat, sans-serif;
+      font-size: 34px;
+      line-height: .95;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .sub{
+      margin: 6px 0 0;
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.62);
+      font-weight: 700;
+    }
+
+    .desc{
+      margin: 14px auto 0;
+      max-width: 300px;
+      font-size: 12px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.62);
+    }
+
+    /* Botões */
+    .actions{
+      position:relative;
+      z-index:2;
+      padding: 8px 18px 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+
+    .btn{
+      height: 44px;
+      border-radius: 999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+
+      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.02);
+      color: rgba(255,255,255,.88);
+
+      transition: transform .14s ease, filter .14s ease, background .14s ease, border-color .14s ease;
+      user-select:none;
+    }
+
+    .btn:hover{
+      filter: brightness(1.04);
+      border-color: rgba(255,255,255,.30);
+      transform: translateY(-1px);
+    }
+    .btn:active{ transform: translateY(0); }
+
+    .btn.primary{
+      background: var(--primary);
+      color: var(--primaryText);
+      border-color: rgba(255,255,255,.10);
+    }
+
+    .btn.wpp{
+      border-color: rgba(255,255,255,.22);
+    }
+    .btn i{
+      font-size: 14px;
+      opacity: .95;
+    }
+
+    /* setinha embaixo */
+    .bottom{
+      position:relative;
+      z-index:2;
+      padding: 0 0 16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: rgba(255,255,255,.40);
+      font-size: 14px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 520px){
+      .hero-frame{ height: 150px; }
+      .title{ font-size: 32px; }
+      .desc{ max-width: 310px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-label="Link na Bio - Miquim Freios">
+
+      <div class="hero">
+        <div class="hero-frame">
+          <!-- ✅ TROQUE a imagem de capa -->
+          <img class="cover" src="../assets/img/miquim.jpeg" alt="Capa Miquim Freios"
+               onerror="this.src='assets/img/download.png'">
+
+          <!-- ✅ Logo no meio (opcional) -->
+          <img class="hero-logo" src="assets/logo.png" alt="Logo Miquim Freios"
+               onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <div class="body">
+        <h1 class="title">MIQUIM FREIOS</h1>
+        <div class="sub">FREIOS • HIDRÁULICA • PNEUMÁTICA</div>
+
+        <p class="desc">
+          Serviço técnico rápido e confiável em Toledo - PR.
+          Orçamento e atendimento pelo WhatsApp.
+        </p>
+      </div>
+
+      <div class="actions">
+        <!-- ✅ TROQUE o link do site -->
+        <a class="btn primary" href="https://miquimfreios.com.br" target="_blank" rel="noopener">
+          SITE PRINCIPAL
+        </a>
+
+        <a class="btn wpp"
+           href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Quero%20um%20or%C3%A7amento."
+           target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          WHATSAPP
+        </a>
+
+        <!-- ✅ COLOQUE seus links reais -->
+        <a class="btn" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          INSTAGRAM
+        </a>
+
+        <a class="btn" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          FACEBOOK
+        </a>
+      </div>
+
+      <div class="bottom" aria-hidden="true">⌄</div>
+    </div>
+  </div>
+</body>
+</html>
