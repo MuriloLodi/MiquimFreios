@@ -1158,15 +1158,6 @@ a {
     transform: scale(1.02);
 }
 
-.spec-media::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        radial-gradient(420px 180px at 70% 30%, rgba(var(--redRGB), .16), transparent 60%),
-        linear-gradient(180deg, rgba(0, 0, 0, .10), rgba(0, 0, 0, .55));
-    pointer-events: none;
-}
 
 .spec-topline {
     display: flex;
