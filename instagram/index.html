@@ -1,4 +1,4 @@
-<!-- bio.html — Link na Bio (estilo do exemplo) -->
+<!-- bio.html — Link na Bio (versão melhorada / mais “clean”) -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,65 +16,51 @@
   <link rel="shortcut icon" href="../assets/img/logo.ico" type="image/x-icon">
 
   <style>
-    :root {
-      --bg: #0b0b0b;
-      --bg2: #0f0f0f;
-      --grid: rgba(255, 255, 255, .06);
-      --text: rgba(255, 255, 255, .88);
-      --muted: rgba(255, 255, 255, .58);
+    :root{
+      --bg:#0b0b0b; --bg2:#0f0f0f;
+      --grid: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.88);
+      --muted: rgba(255,255,255,.58);
 
-      /* ✅ PALETA SÓ VERMELHO (mecânica) */
-      --red: #E11D2E;
-      --red2: #B0121E;
+      --red:#E11D2E; --red2:#B0121E;
       --redRGB: 225, 29, 46;
-      --red2RGB: 176, 18, 30;
 
-      --card: rgba(22, 24, 28, .92);
-      --card2: rgba(14, 15, 18, .92);
-      --stroke: rgba(255, 255, 255, .10);
+      --card: rgba(22,24,28,.92);
+      --card2: rgba(14,15,18,.92);
 
-      --primary: #f2efe8;         /* botão claro tipo exemplo */
-      --primaryText: #151515;
-
-      --wpp: #25D366;
-
-      --wrapW: 1100px;
+      --primary:#f2efe8;
+      --primaryText:#151515;
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
     body{
       margin:0;
       font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
       overflow-x:hidden;
-
       background:
         radial-gradient(1200px 600px at 50% 35%, rgba(255,255,255,.05), transparent 60%),
-        radial-gradient(900px 520px at 65% 25%, rgba(var(--redRGB), .12), transparent 60%),
+        radial-gradient(900px 520px at 65% 25%, rgba(var(--redRGB), .10), transparent 60%),
         linear-gradient(180deg, var(--bg2), var(--bg));
     }
 
     body::before{
       content:"";
-      position:fixed;
-      inset:-40px;
+      position:fixed; inset:-40px;
       pointer-events:none;
       background:
         repeating-linear-gradient(0deg, var(--grid) 0 1px, transparent 1px 38px),
         repeating-linear-gradient(90deg, var(--grid) 0 1px, transparent 1px 38px);
-      opacity:.28;
+      opacity:.22;
       z-index:-2;
     }
 
     body::after{
       content:"";
-      position:fixed;
-      inset:0;
+      position:fixed; inset:0;
       pointer-events:none;
-      background:
-        radial-gradient(circle at 50% 35%, rgba(0,0,0,.0), rgba(0,0,0,.55) 55%, rgba(0,0,0,.82) 80%);
+      background: radial-gradient(circle at 50% 35%, rgba(0,0,0,0), rgba(0,0,0,.55) 55%, rgba(0,0,0,.82) 80%);
       z-index:-1;
     }
 
@@ -88,7 +74,6 @@
       padding: 42px 18px;
     }
 
-    /* Card central (igual exemplo) */
     .card{
       width: min(420px, 100%);
       background: linear-gradient(180deg, var(--card), var(--card2));
@@ -101,8 +86,7 @@
 
     .card::before{
       content:"";
-      position:absolute;
-      inset:0;
+      position:absolute; inset:0;
       pointer-events:none;
       background:
         radial-gradient(700px 260px at 50% -10%, rgba(255,255,255,.08), transparent 60%),
@@ -110,12 +94,8 @@
       opacity:.9;
     }
 
-    /* Hero imagem */
-    .hero{
-      position:relative;
-      padding: 16px 16px 0;
-      z-index:2;
-    }
+    /* HERO */
+    .hero{ position:relative; padding: 16px 16px 0; z-index:2; }
     .hero-frame{
       position:relative;
       border-radius: 16px;
@@ -125,27 +105,22 @@
       height: 160px;
     }
     .hero-frame img.cover{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+      width:100%; height:100%;
+      object-fit:cover; display:block;
       filter: contrast(1.02) saturate(1.02);
       transform: scale(1.02);
       opacity:.92;
     }
     .hero-frame::after{
       content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.62));
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.62));
       pointer-events:none;
     }
     .hero-logo{
       position:absolute;
-      left:50%;
-      top:50%;
-      transform: translate(-50%, -50%);
+      left:50%; top:50%;
+      transform: translate(-50%,-50%);
       width: 210px;
       max-width: 78%;
       height:auto;
@@ -154,52 +129,100 @@
       z-index:2;
     }
 
-    /* Conteúdo */
+    /* TEXTOS */
     .body{
       position:relative;
       z-index:2;
       text-align:center;
-      padding: 14px 18px 16px;
+      padding: 14px 18px 10px;
     }
-
     .title{
       margin: 0;
       font-family: Teko, Montserrat, sans-serif;
       font-size: 34px;
       line-height: .95;
-      letter-spacing: .14em;
+      letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--red);
       font-weight: 700;
     }
-
     .sub{
       margin: 6px 0 0;
       font-size: 11px;
-      letter-spacing: .22em;
+      letter-spacing: .18em;
       text-transform: uppercase;
       color: rgba(255,255,255,.62);
-      font-weight: 700;
+      font-weight: 800;
     }
-
     .desc{
-      margin: 14px auto 0;
-      max-width: 320px;
+      margin: 12px auto 0;
+      max-width: 340px;
       font-size: 12px;
       line-height: 1.7;
       color: rgba(255,255,255,.62);
     }
 
-    /* Botões */
+    /* ✅ LISTA “clean” (sem caixinha pesada) */
+    .divider{
+      margin: 14px auto 10px;
+      width: 85%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
+    }
+
+    .spec{
+      margin: 0 auto;
+      width: min(360px, 100%);
+      text-align:left;
+    }
+
+    .spec-title{
+      margin: 0 0 10px;
+      font-size: 12px;
+      font-weight: 900;
+      color: rgba(255,255,255,.86);
+      letter-spacing: .04em;
+    }
+
+    .spec-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    /* em telas um pouquinho maiores, fica 2 colunas e não “espicha” */
+    @media (min-width: 430px){
+      .spec-list{ grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+    }
+
+    .spec-list li{
+      display:flex;
+      align-items:flex-start;
+      gap: 10px;
+      font-size: 12px;
+      line-height: 1.25;
+      color: rgba(255,255,255,.72);
+    }
+
+    .spec-list i{
+      margin-top: 2px;
+      font-size: 14px;
+      color: rgba(var(--redRGB), .95); /* check vermelho (fica “bonito” e discreto) */
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
+    }
+
+    /* BOTÕES */
     .actions{
       position:relative;
       z-index:2;
-      padding: 8px 18px 18px;
+      padding: 14px 18px 18px;
       display:flex;
       flex-direction:column;
       gap: 10px;
     }
-
     .btn{
       height: 44px;
       border-radius: 999px;
@@ -208,24 +231,19 @@
       justify-content:center;
       gap: 10px;
 
-      letter-spacing: .18em;
+      letter-spacing: .16em;
       text-transform: uppercase;
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 900;
 
       border: 1px solid rgba(255,255,255,.22);
       background: rgba(255,255,255,.02);
       color: rgba(255,255,255,.88);
 
-      transition: transform .14s ease, filter .14s ease, background .14s ease, border-color .14s ease;
+      transition: transform .14s ease, filter .14s ease, border-color .14s ease;
       user-select:none;
     }
-
-    .btn:hover{
-      filter: brightness(1.04);
-      border-color: rgba(255,255,255,.30);
-      transform: translateY(-1px);
-    }
+    .btn:hover{ filter: brightness(1.04); border-color: rgba(255,255,255,.30); transform: translateY(-1px); }
     .btn:active{ transform: translateY(0); }
 
     .btn.primary{
@@ -233,16 +251,8 @@
       color: var(--primaryText);
       border-color: rgba(255,255,255,.10);
     }
+    .btn i{ font-size: 14px; opacity: .95; }
 
-    .btn.wpp{
-      border-color: rgba(255,255,255,.22);
-    }
-    .btn i{
-      font-size: 14px;
-      opacity: .95;
-    }
-
-    /* setinha embaixo */
     .bottom{
       position:relative;
       z-index:2;
@@ -254,7 +264,6 @@
       font-size: 14px;
     }
 
-    /* Responsivo */
     @media (max-width: 520px){
       .hero-frame{ height: 150px; }
       .title{ font-size: 32px; }
@@ -269,44 +278,51 @@
 
       <div class="hero">
         <div class="hero-frame">
-          <!-- ✅ TROQUE a imagem de capa -->
+          <!-- ✅ capa -->
           <img class="cover" src="../assets/img/miquim.jpeg" alt="Capa Miquim Freios"
-               onerror="this.src='assets/img/download.png'">
-
-          <!-- ✅ Logo no meio (opcional) -->
-          <img class="hero-logo" src="assets/logo.png" alt="Logo Miquim Freios"
-               onerror="this.style.display='none'">
+               onerror="this.src='../assets/img/download.png'">
         </div>
       </div>
 
       <div class="body">
         <h1 class="title">MIQUIM FREIOS</h1>
+        <div class="sub">ESPECIALISTA EM LINHA PESADA</div>
 
-        <!-- ✅ Subtítulo ajustado (sem mudar visual) -->
-        <div class="sub">FREIO ELETRÔNICO • CUÍCAS • pneumáticos • COMPRESSORES DE AR</div>
-
-        <!-- ✅ Descrição ajustada -->
         <p class="desc">
-          Manutenção e reparo em válvulas de freio eletrônicas, cuícas e compressores de ar
-          para veículos diesel pesados (caminhões e ônibus) em Toledo - PR.
+          Freio eletrônico e pneumática para caminhões e ônibus em Toledo - PR.
           Atendimento e orçamento pelo WhatsApp.
         </p>
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <div class="spec" aria-label="Especialidades em linha pesada">
+          <div class="spec-title">Especialidades:</div>
+          <ul class="spec-list">
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Cuícas de freio</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Válvula APS</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Válvula APM Volvo</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Válvula distribuidora</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Válvula pedal</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Moduladoras de ABS</li>
+            <li style="grid-column: 1 / -1;">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Sistema pneumático completo
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="actions">
-        <!-- ✅ TROQUE o link do site -->
         <a class="btn primary" href="https://miquimfreios.com.br" target="_blank" rel="noopener">
           SITE PRINCIPAL
         </a>
 
-        <a class="btn wpp"
+        <a class="btn"
            href="https://wa.me/5545998096373?text=Ol%C3%A1%20Miquim%20Freios!%20Quero%20um%20or%C3%A7amento."
            target="_blank" rel="noopener">
           <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
           WHATSAPP
         </a>
 
-        <!-- ✅ COLOQUE seus links reais -->
         <a class="btn" href="https://www.instagram.com/miquinbogado/" target="_blank" rel="noopener">
           <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           INSTAGRAM
