@@ -1680,6 +1680,11 @@ a {
     opacity: .9
 }
 
+.footer-loc .foot-item {
+    margin-top: 12px;
+    text-decoration: none
+}
+
 .foot-item i {
     color: var(--red);
     font-size: 13px;
